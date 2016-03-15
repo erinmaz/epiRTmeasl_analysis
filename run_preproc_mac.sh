@@ -13,7 +13,7 @@ set alldirs = ${scriptdir}:${scriptdir}/spm8:${scriptdir}/spm8/EEGtemplates:${sc
 
 setenv MATLABPATH ${alldirs}
 set dicomdir = `pwd`
-set file1 = `find $dicomdir/* -type f | head -1` 
+set file1 = `find $dicomdir/ -type f | xargs head -1;` 
 set ldtmp = `dicom_hinfo -tag 0019,10b0 $file1`
 set ld = $ldtmp[2]
 set titmp = `dicom_hinfo -tag 0019,10ad $file1`

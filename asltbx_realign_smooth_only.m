@@ -45,7 +45,7 @@ for j = 1:length(inputfiles),
     %%%%%%%%%%%%%%%%%
     %%SMOOTH
     %%%%%%%%%%%%%%%%%
-    if nargin < 8
+    if nargin < 3
         FWHM = 5;
     end
 
